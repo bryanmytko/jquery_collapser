@@ -1,5 +1,5 @@
 /****************************
-jQuery Collapser 0.1
+jQuery Collapser 0.1.1
 Author: bryanmytko@gmail.com
 @a.animate: Boolean
 @a.fade: Boolean
@@ -7,30 +7,36 @@ Author: bryanmytko@gmail.com
 @a.speed: String
 ****************************/
 (function($){
-  var $_b;
-  var $_u;
+	
+  var $_this;
+  var $_child;
   var $_class;
+
   $.fn.Collapser = function(a){	
-    $_b = $(this);	
+    $_this = this;	
     /* hides elements & prevents a css bug when containers elements have padding */
-    $_b.next('div').css({'display': 'none','overflow' : 'hidden'});   
+    $_this.next('div').css({'display': 'none','overflow' : 'hidden'});   
     /* sets 'open' class */
     $_class = (a.openClass) ? a.openClass : 'cOpen';		
     /* checks for units set to be open on load */
-    $_b.each(function(){
-    if($(this).hasClass($_class)) $(this).next('div').show();
-  });		
-  $_b.click(function(){
-    $(this).toggleClass($_class);
-    $_u = $(this).next();
-    (a.animate) ? animateToggle($_u) : $_u.toggle();
-  });	
-}
-function animateToggle(u){
-  (a.fade) ? u.slideFadeToggle(a.speed) : u.stop(true, true).slideToggle(a.speed);
-}	
-/* Slide Toggle effect */
-$.fn.slideFadeToggle = function(speed) {
-  return this.animate({opacity: 'toggle', height: 'toggle'}, speed);
-};	
+    $_this.each(function(){
+
+      if($(this).hasClass($_class)) $(this).next('div').show();
+    });		
+    $_this.click(function(){
+      $(this).toggleClass($_class);
+      $_child = $(this).next();
+      (a.animate) ? animateToggle(a,$_child) : $_child.toggle();
+    });	
+  }
+
+  function animateToggle(a,c){
+    (a.fade) ? c.slideFadeToggle(a.speed) : c.stop(true, true).slideToggle(a.speed);
+  }	
+
+  /* Slide Toggle effect */
+  $.fn.slideFadeToggle = function(speed) {
+    return this.animate({opacity: 'toggle', height: 'toggle'}, speed);
+  };	
+
 })(jQuery);
