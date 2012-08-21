@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0 }
+
+html, body { font-family: "Helvetica","Arial", sans; font-size: 1.2em; color: #666 }
+
+div { -moz-border-radius: 15px; border-radius: 15px }
+h1 { color: #0072be }
+h2 { color: #1d5c92 }
+a  { color: #0072be; text-decoration: none }
+
+#mainContainer { width: 980px; margin: 20px auto; background: #F5F6F8; border: solid 1px #DBE1E6 }
+#mainContent { padding: 40px }
+#mainContent p { margin: 20px; font-size: 12px }
+
+#instructions { background: #fff; border: 1px solid #DBE1E6; margin: 20px 0 }
+
+.collapserBar { background: #0072be; padding: 14px; color: #fff; cursor: pointer; margin: 10px 0 }
+.cOpen { background: #1d5c92 }
+.collapserBar h3 { font-weight: normal }

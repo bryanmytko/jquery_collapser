@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/collapser.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>jQuery Collapser Demo</title>
+</head>
+<body>
+<div id="mainContainer">
+	<div id="mainContent">
+		<h1>jQuery Collapser</h1>
+		<h2>Demo page</h2>
+		<div id="instructions">
+			<p>Simple to use: call Collapser on one or more HTML elements, and it will expand/collapse the next div. There is no need for plugin specific class names, and you can set the "open" class name in the Collapser options (it will default to "cOpen" if not set).</p>
+			<p>Other options include animate (Boolean), speed (String), fade (Boolean). </p>
+			<p>If you wish for sections to be open on page load, just give them the "cOpen" class, or whatever class you choose in the settings.</p>
+			<p>There are no CSS requirements. I personally hate plugins that are bogged down with convoluted CSS that takes forever to change and fit the style of <em>your</em> website. However, feel free to use my CSS as a guide. [<a href="jqueryCollapser.zip">Download</a>]</p>
+			<p>Example Javascript:
+				<pre>
+	&lt;script&gt;
+	$(document).ready(function(){
+		$('div.collapserBar').Collapser({
+		  openClass: 'cOpen',
+			animate: true,
+			speed: 'fast',
+			fade: true
+	  });
+	});
+	&lt;/script&gt;
+				</pre>
+			</p>
+			<p>Example HTML:
+				<pre>
+	&lt;div class="collapserBar"&gt;
+	&nbsp; &lt;h3&gt;Content Area #1&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;p&gt;Hello!&lt;/p&gt;
+				</pre>		
+		</div>
+		<script>
+		$(document).ready(function(){
+			$('div.collapserBar').Collapser({
+			  openClass: 'cOpen',
+				animate: true,
+				speed: 'fast',
+				fade: true
+		  });
+		});
+		</script>
+	
+		<!-- div collapse bar 1 -->
+		<div class="collapserBar cOpen">
+			<h3>Content Area #1</h3>
+		</div>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in molestie nulla. Proin nec metus sit amet ipsum luctus blandit vitae id velit. Maecenas facilisis consequat velit, quis rutrum erat feugiat et. Nulla facilisi.</p>
+			<p>Sed vel massa nisl, egestas vehicula libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor lacinia. Quisque mauris lorem, tristique hendrerit viverra id, bibendum id metus. Donec in turpis vitae nunc bibendum porttitor. Duis quis mauris vel turpis viverra rutrum et vel odio. Suspendisse venenatis tincidunt cursus. Pellentesque orci risus, dignissim vitae volutpat id, scelerisque id nunc.</p>
+		</div>
+	
+		<!-- div collapse bar 2 -->
+		<div class="collapserBar">
+			<h3>Content Area #2</h3>
+		</div>
+		<div>
+		<p>Maecenas eleifend ultricies est, sed posuere odio pellentesque ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque erat nec neque bibendum non egestas magna dignissim. Nulla consequat dignissim nulla, et convallis enim aliquam in. Duis vulputate, nulla non vehicula placerat, mi tortor suscipit nunc, vel eleifend odio lacus eget erat. Fusce ultrices nunc nulla. Donec risus turpis, sodales eget eleifend eu, iaculis ultricies purus. Praesent eu neque a metus fermentum feugiat. Nam faucibus ultrices velit, sed tincidunt lacus pretium fermentum.</p>
+	  </div>
+	
+		<!-- div collapse bar 3 -->
+		<div class="collapserBar">
+			<h3>Content Area #3</h3>
+		</div>
+		<div>
+				<p>Sed vel massa nisl, egestas vehicula libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor lacinia. Quisque mauris lorem, tristique hendrerit viverra id, bibendum id metus. Donec in turpis vitae nunc bibendum porttitor. Duis quis mauris vel turpis viverra rutrum et vel odio. Suspendisse venenatis tincidunt cursus. Pellentesque orci risus, dignissim vitae volutpat id, scelerisque id nunc.</p>
+			<p>Sed vel massa nisl, egestas vehicula libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor lacinia. Quisque mauris lorem, tristique hendrerit viverra id, bibendum id metus. Donec in turpis vitae nunc bibendum porttitor. Duis quis mauris vel turpis viverra rutrum et vel odio. Suspendisse venenatis tincidunt cursus. Pellentesque orci risus, dignissim vitae volutpat id, scelerisque id nunc.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in molestie nulla. Proin nec metus sit amet ipsum luctus blandit vitae id velit. Maecenas facilisis consequat velit, quis rutrum erat feugiat et. Nulla facilisi.</p>
+		</div>
+		
+	</div>
+</div>
+</body>
+</html>
