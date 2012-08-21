@@ -1,0 +1,4 @@
+jqueryCollapser
+===============
+
+jQuery Collapser Plugin
