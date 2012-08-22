@@ -6,8 +6,7 @@
 			
 			<p>Simple to use: call the .Collapser() method on one or more HTML elements which will now listen for clicks to expand/collapse the next div. There is no need for plugin specific class names, and you can set the "open" class name in the Collapser options (it will default to "cOpen" if not set).</p>
 			
-			<p>Other options include anim
-				ate (Boolean), speed (String), fade (Boolean). Have any suggestions? <a href="mailto:bryanmytko@gmail.com">Email me!</a> </p>
+			<p>Other options include animate (Boolean), speed (String), fade (Boolean). Have any suggestions? <a href="mailto:bryanmytko@gmail.com">Email me!</a> </p>
 			
 			<p>If you wish for sections to be open on page load, just give them the "cOpen" class, or whatever class you chose in the settings to override "cOpen".</p>
 			
